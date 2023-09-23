@@ -11,6 +11,8 @@ resource "aws_lb_listener" "main" {
   load_balancer_arn = aws_lb.main.arn
   port              = "80"
   protocol          = "HTTP"
+  ssl_policy        = null
+  certificate_arn   = null
 
   default_action {
     type = "fixed-response"
